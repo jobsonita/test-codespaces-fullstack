@@ -1,0 +1,94 @@
+{
+	"name": "JavaScript Fullstack Codespace",
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+	},
+	"forwardPorts": ["${localEnv:PORT:8080}", "${localEnv:SERVER_PORT:3000}"],
+	"postCreateCommand": "npm i -g dotenv-cli && cd web && npm install && cd ../api && npm install && cd ..",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"breadcrumbs.enabled": false,
+				"editor.codeActionsOnSave": {
+					"source.fixAll.eslint": true
+				},
+				"editor.minimap.enabled": false,
+				"editor.parameterHints.enabled": false,
+				"editor.renderLineHighlight": "gutter",
+				"editor.rulers": [80, 120],
+				"editor.tabSize": 2,
+				"editor.wrappingIndent": "deepIndent",
+				"explorer.compactFolders": false,
+				"extensions.ignoreRecommendations": true,
+				"files.associations": {
+					"*.tsx": "typescriptreact"
+				},
+				"files.eol": "\n",
+				"git.autofetch": true,
+				"git.confirmSync": false,
+				"material-icon-theme.activeIconPack": "nest",
+				"material-icon-theme.files.associations": {
+					"tsconfig.json": "tune"
+				},
+				"material-icon-theme.folders.associations": {
+					"adapters": "contract",
+					"domain": "class",
+					"dtos": "typescript",
+					"entities": "class",
+					"factories": "class",
+					"fakes": "mock",
+					"http": "container",
+					"implementations": "core",
+					"infra": "app",
+					"main": "lib",
+					"mappers": "meta",
+					"migrations": "tools",
+					"modules": "components",
+					"repositories": "mappings",
+					"schemas": "class",
+					"use-cases": "functions",
+					"useCases": "functions"
+				},
+				"material-icon-theme.languages.associations": {
+					"dotenv": "tune"
+				},
+				"workbench.iconTheme": "material-icon-theme",
+				"[javascript]": {
+					"suggest.autoImports": true,
+					"editor.defaultFormatter": "vscode.typescript-language-features",
+					"editor.formatOnSave": true
+				},
+				"[javascriptreact]": {
+					"suggest.autoImports": true,
+					"editor.defaultFormatter": "vscode.typescript-language-features",
+					"editor.formatOnSave": true
+				},
+				"[prisma]": {
+						"suggest.autoImports": true,
+						"editor.defaultFormatter": "Prisma.prisma",
+						"editor.formatOnSave": true
+				},
+				"[typescript]": {
+					"suggest.autoImports": true,
+					"editor.defaultFormatter": "vscode.typescript-language-features",
+					"editor.formatOnSave": true
+				},
+				"[typescriptreact]": {
+					"suggest.autoImports": true,
+					"editor.defaultFormatter": "vscode.typescript-language-features",
+					"editor.formatOnSave": true
+				}
+			},
+			"extensions": [
+				"naumovs.color-highlight",
+				"EditorConfig.EditorConfig",
+				"dbaeumer.vscode-eslint",
+				"eamodio.gitlens",
+				"PKief.material-icon-theme",
+				"bradlc.vscode-tailwindcss",
+				"Prisma.prisma",
+				"mikestead.dotenv"
+			]
+		}
+	}
+}
